@@ -5,21 +5,21 @@
 class Bitrise < Formula
   desc "Command-line tool for Bitrise CI/CD"
   homepage "https://github.com/sp3esu/bitrise-cli"
-  version "1.0.0"
+  version "1.0.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sp3esu/bitrise-cli/releases/download/v1.0.0/bitrise_darwin_amd64.tar.gz"
-      sha256 "f9227c97338e8f47342c612ccdd1f11178f3c710342855943b084b6aed508f72"
+      url "https://github.com/sp3esu/bitrise-cli/releases/download/v1.0.1/bitrise_darwin_amd64.tar.gz"
+      sha256 "fa95ceb867bb81820318c6a9e4517f5487194aa73a8650b2018e46e3d1ec9c59"
 
       define_method(:install) do
         bin.install "bitrise"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sp3esu/bitrise-cli/releases/download/v1.0.0/bitrise_darwin_arm64.tar.gz"
-      sha256 "645680edc90c9f2e4c3fc03f82045f226ffd7ef142e07816580d1768c6ccb971"
+      url "https://github.com/sp3esu/bitrise-cli/releases/download/v1.0.1/bitrise_darwin_arm64.tar.gz"
+      sha256 "091a7489181d0cc18e92a600e9d28529add5514bcc6acf08b63595cc7f1facc0"
 
       define_method(:install) do
         bin.install "bitrise"
@@ -29,15 +29,15 @@ class Bitrise < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sp3esu/bitrise-cli/releases/download/v1.0.0/bitrise_linux_amd64.tar.gz"
-      sha256 "102e07d3d76257ca28703fdccdfa19b00ed28d516f970b4ac3ca3bd40fee20e1"
+      url "https://github.com/sp3esu/bitrise-cli/releases/download/v1.0.1/bitrise_linux_amd64.tar.gz"
+      sha256 "59312a6957b20805de8ec30ee3251d1fd25d9cd74a43663682ee874b233ec1cd"
       define_method(:install) do
         bin.install "bitrise"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sp3esu/bitrise-cli/releases/download/v1.0.0/bitrise_linux_arm64.tar.gz"
-      sha256 "130c0cee2e0bc608191a0c5ab3072b7904ea7fc481c183ca4387a7d0567b9a8a"
+      url "https://github.com/sp3esu/bitrise-cli/releases/download/v1.0.1/bitrise_linux_arm64.tar.gz"
+      sha256 "04589574647589530720feea7bcdef68d705f76b50fb5edd39c1c6afc38e7751"
       define_method(:install) do
         bin.install "bitrise"
       end
