@@ -5,21 +5,21 @@
 class MacCleaner < Formula
   desc "Fast, safe CLI tool for macOS to scan and reclaim disk space"
   homepage "https://github.com/sp3esu/mac-cleaner"
-  version "1.6.0"
+  version "1.7.0"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/sp3esu/mac-cleaner/releases/download/v1.6.0/mac-cleaner_darwin_amd64.tar.gz"
-    sha256 "3592383049079414e055d95952d226119048214ee7e943912747da879f0c7840"
+    url "https://github.com/sp3esu/mac-cleaner/releases/download/v1.7.0/mac-cleaner_darwin_amd64.tar.gz"
+    sha256 "a8a0e714a0f019d50664a05100f698344a02e8db817369cf746d5a592afe115e"
 
     define_method(:install) do
       bin.install "mac-cleaner"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/sp3esu/mac-cleaner/releases/download/v1.6.0/mac-cleaner_darwin_arm64.tar.gz"
-    sha256 "e3d39d2a848e7039e1bba0b827af8289c50d5920964426bff6bacb75913539f6"
+    url "https://github.com/sp3esu/mac-cleaner/releases/download/v1.7.0/mac-cleaner_darwin_arm64.tar.gz"
+    sha256 "f94c1363ae940038981f52afd26f632f639a6977ad1466229adbaa64dc5a8da1"
 
     define_method(:install) do
       bin.install "mac-cleaner"
